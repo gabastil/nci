@@ -1,0 +1,555 @@
+/* filename: personas.css
+ * author: Glenn Abastillas
+ * created: January 16, 2020
+ * description: Style definitions for the personas page
+ */
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-y: hidden;
+}
+
+div
+{
+    display:  block;
+    width:  100%;
+}
+
+textarea
+{
+    background:  #efefef;
+    border-radius: 5px;
+    border:  none;
+    resize:  none;
+    overflow: hidden;
+    width:  95%;
+    font-size: 1.5em;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input
+{
+    background: #efefef;
+    border-radius: 5px;
+    border: none;
+    padding:  0;
+    margin-bottom: 0.25em;
+    width: 95%;
+}
+
+
+input:hover, textarea:hover
+{
+    background: #eaeaea;
+}
+
+h2
+{
+    font-size: 2em;
+    font-weight: 100;
+    color: rgba(1,1,1,.3);
+}
+
+
+#background
+{
+    position: absolute;
+    background: #ebebeb;
+    bottom:  0;
+    height: 100%;
+    width:  100%;
+    overflow-y:  hidden;
+}
+
+
+#navigation-panel
+{
+    color:  white;
+    background: #539ae6;
+    display: flex;
+    flex-direction: row;
+    height: 3em;
+}
+
+
+#navigation-content
+{
+    /*background: red;*/
+    font-size: 2em;
+    left: 20%;
+    position: relative;
+    width: auto;
+}
+
+
+#navigation-content a
+{
+    display: inline-block;
+    border-radius: 0.5em;
+    font-size: 0.5em;
+    margin: 0;
+    margin-right: 0.5em;
+    padding: 0.7em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+#navigation-content a:hover
+{
+    background: #8db6e3;
+}
+
+
+#navigation-content a:active
+{
+    background: #8db6f4;
+}
+
+
+#navigation-personas
+{
+    left: 20%;
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5;
+}
+
+#persona-panel
+{
+    height:  100%;
+    width:  100%;
+}
+
+
+#persona-card
+{
+    background: #efefef;
+    border: solid 1px #ddd;
+    border-radius: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin:  0 auto;
+    position: relative;
+    padding:  1em;
+    top:  50%;
+    transform: translateY(-75%);
+    width:  60%;
+    height:  60%;
+}
+
+#persona-card-left
+{
+    width: 20%;
+    border-right: solid 1px gray;
+}
+
+.card-top
+{
+    display: block;
+    height:  30%;
+    padding-bottom: 1em;
+}
+
+.card-top img
+{
+    border-radius: 10em;
+    height: 7em;
+    width: 7em;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    top: 25%;
+    border: solid 1px gray;
+}
+
+.card-bottom
+{
+    padding-top: 1em;
+    height:  60%;
+}
+
+#persona-avatar
+{
+    width:  90%;
+}
+
+#persona-selection-pane
+{
+    opacity: 0;
+    height: 20em;
+    width: 4em;
+    left: -4em;
+    position: fixed;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+
+#show-default-avatars
+{
+    height: 1em;
+    width: 1em;
+    left: 1em;
+    border-radius: 10em;
+    border: solid 1px #999;
+    background: #afcf93;
+    position: fixed;
+    transition: all 1s ease;
+}
+
+
+.default-persona
+{
+    border-radius: 10em;
+    margin-bottom: 0.5em;
+    height: 3em;
+    width: 3em;
+    top: 0;
+    transition: all 1s ease;
+}
+
+.default-persona img
+{
+    height: 3em;
+    width: 3em;
+    object-fit: cover;
+    border: solid 1px #999;
+}
+
+#persona-card-right
+{
+    box-sizing: border-box;
+    padding-left:  1em;
+    width: 80%;
+}
+
+#url
+{
+    color: #999;
+}
+
+#name
+{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#title
+{
+    font-size:  1.5em;
+    font-weight: 200;
+    color:  rgba(1,1,1,.5);
+}
+
+#goals
+{
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#goals, #description
+{
+    height: 100%;
+}
+
+
+#guidelines
+{
+    display: block;
+    margin: 0 auto;
+    padding: 2em;
+    padding-top: 3em;
+    margin: 1em auto;
+    width: 60%;
+    color: #777;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 0.7em;
+}
+
+#reference
+{
+    font-size: 0.75em;
+}
+
+
+.saved-persona
+{
+    border: solid 1px #efefef;
+    border-radius: 10em;
+    height: 2.5em;
+    width: 2.5em;
+    margin: auto;
+    margin-right: 0.5em;
+}
+
+.saved-persona img
+{
+    border-radius: 10em;
+    display: block;
+    height: 2.5em;
+    object-fit: cover;
+    width: 2.5em;
+    opacity: 0.75;
+    transition: all 0.5s ease;
+}
+
+.saved-persona img:hover
+{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+/*
+p
+{
+    color:  #aaa;
+    text-align: center;
+    font-size: 1.5em;
+    width:  100%;
+    user-select:  none;
+    -webkit-user-select:  none;
+    cursor:  default;
+}
+
+span
+{
+    font-size: 0.5em;
+    font-weight: 100;
+    opacity: .5;
+}
+
+input
+{
+    border:  none;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0.1em #efefef;
+    font-size:  1em;
+    color: #222;
+    width: 15em;
+    height:  1.75em;
+    margin-bottom:  1em;
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+input:hover
+{
+    background:  #eeffff;
+}
+
+textarea
+{
+    border:  solid 2px #efefef;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0.1em #dfdfdf;
+    box-sizing: border-box;
+
+    font-size:  1em;
+
+    color: #222;
+
+    margin-top: 0.5em;
+    padding:  1em;
+
+    resize: none;
+    height: 80%;
+    width: 80%;
+}
+
+textarea:hover
+{
+    background: #eeffff;
+}
+
+#background
+{
+    background: #efefef;
+    position:  absolute;
+    height:  100vh;
+    bottom:  0;
+}
+
+#nav
+{
+    background: #1189cc;
+    border-bottom:  solid 5px #1077cb;
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+    height: 3em;
+    padding: 0 2em;
+    user-select:  none;
+    -webkit-user-select:  none;
+    cursor: default;
+}
+
+#title
+{
+    font-size: 1.5em;
+    width:  auto;
+    color: #fff;
+    padding-top:  5px;
+    padding-bottom:  5px;
+}
+
+#subtitle
+{
+    font-weight: 100;
+    opacity: .8;
+}
+
+#content
+{
+    background: #efefef;
+    position:  absolute;
+    top: 2em;
+    bottom: 0;
+}
+
+#persona
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 100%;
+}
+
+#image
+{
+    display:  block;
+    margin: 1.5em auto;
+
+    background: #ddd;
+
+    border:  solid 2px #bbb;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0.1em #dfdfdf;
+    box-sizing: border-box;
+
+    width:  10em;
+    height:  14em;
+}
+
+#image-text
+{
+    background: red;
+    width: 5em;
+    height: 5em;
+}
+
+#image-selector
+{
+    background:  #aaa;
+    border-radius: 1em;
+    position:  relative;
+    margin:  auto;
+    left: 55%;
+    height: 90%;
+    width:  0%;
+    display: flex;
+    flex-direction: row;
+}
+
+#job
+{
+    border-right: solid 1px #ccc;
+    width: 20%;
+    text-align: center;
+    height:  100%;
+    bottom: 0;
+}
+
+#description
+{
+    border-right: solid 1px #ccc;
+    width: 40%;
+    text-align: center;
+    height:  100%;
+    bottom: 0;
+}
+
+#goals
+{
+    width: 40%;
+    text-align: center;
+    height:  100%;
+    bottom: 0;
+}
+
+#personas-current
+{
+    box-sizing: border-box;
+    text-align:  left;
+    padding: 0 2em;
+    overflow-y:  scroll;
+}
+
+#personas-current a
+{
+    cursor:  pointer;
+    user-select: none;
+    -webkit-user-select:  none;
+}
+
+#personas-current a:hover
+{
+    color: #11ceef;
+}
+
+.persona-orb
+{
+    background: white;
+    border-radius: 4em;
+    width: 1.5em;
+    height:  1.5em;
+}
+
+.button
+{
+    color:  #eeeeff;
+    cursor:  pointer;
+
+    font-size:  1.2em;
+    text-align: center;
+
+    margin-left:  2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    height:  auto;
+    width:  4em;
+
+    user-select: none;
+    -web-user-select:  none;
+}
+
+.profile
+{
+    border-radius: 1em;
+    background: white;
+    height: 2em;
+    width:  2em;
+}
+
+.clear-personas, .clear-fields
+{
+    width: 8em;
+}
+
+.button:hover
+{
+    background: #00abef;
+}
+
+.button:active
+{
+    background:  #00bcff;
+} */

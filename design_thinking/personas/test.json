@@ -1,0 +1,23 @@
+{
+  "TaylorLayperson": {
+    "name": "Taylor",
+    "title": "Layperson",
+    "description": "asdfasdf",
+    "goals": "• asdf\n• asdf\n• asdf\n• asdf\n",
+    "url": "./img/person0.jpg"
+  },
+  "AlexTechnician": {
+    "name": "Alex",
+    "title": "Technician",
+    "description": "areas",
+    "goals": "• zxcv\n• asdf\n",
+    "url": "./img/person1.jpg"
+  },
+  "Bobbersas;dlfkja": {
+    "name": "Bobbers",
+    "title": "as;dlfkja",
+    "description": "asd;lfkjasd;lfkj",
+    "goals": "• zxcvlp98u398\n• asdf09\n• 93\n",
+    "url": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  }
+}
