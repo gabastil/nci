@@ -35,7 +35,10 @@ if __name__=='__main__':
 
 
     pp = PrettyPrinter(indent=4)
-    pp.pprint([int(__) for __ in completed])
-    pp.pprint([int(__) for __ in incompleted])
-    pp.pprint(list(unmatched))
-    print(len(completed | incompleted | unmatched))
+
+    for task in incompleted:
+        print(int(task))
+
+    # pp.pprint([int(__) for __ in incompleted])
+    # pp.pprint(list(unmatched))
+    # print(len(completed | incompleted | unmatched))
